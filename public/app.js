@@ -1,4 +1,8 @@
-const API_BASE = "/api";
+//use this to test locally
+//const API_BASE = "/api";
+
+//use this for deployed render API
+const API_BASE = "https://mongo-register-students-api.onrender.com/api";
 
 // DOM elements
 const coursesList = document.getElementById("coursesList");
