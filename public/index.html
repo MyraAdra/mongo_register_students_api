@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student & Course Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Student & Course Management</h1>
+    <button id="seedBtn" class="btn seed">Seed Demo Data</button>
+  </header>
+
+  <main>
+    <div class="columns-container">
+
+      <!-- Courses Section -->
+      <section>
+        <h2>Courses</h2>
+        <form id="courseForm" class="form">
+          <input type="text" id="courseTitle" placeholder="Title" required />
+          <input type="text" id="courseCode" placeholder="Code" required />
+          <button class="btn primary">Add Course</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Code</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="coursesList"></tbody>
+        </table>
+      </section>
+
+      <!-- Students Section -->
+      <section>
+        <h2>Students</h2>
+        <form id="studentForm" class="form">
+          <input type="text" id="studentName" placeholder="Name" required />
+          <input type="email" id="studentEmail" placeholder="Email" />
+          <button class="btn primary">Add Student</button>
+        </form>
+
+        <input type="text" id="studentSearch" placeholder="Search students..." class="search" />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Courses</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsList"></tbody>
+        </table>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Modal for Registration -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h3>Register / Unregister Courses</h3>
+      <ul id="modalCourses"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student & Course Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🎓 Student & Course Manager</h1>
+</header>
+
+<main class="main-grid">
+
+  <!-- Courses Section -->
+  <section>
+    <h2>Courses</h2>
+
+    <form id="courseForm" class="form">
+      <input type="text" id="courseTitle" placeholder="Course Title" required>
+      <input type="text" id="courseCode" placeholder="Code" required>
+      <button class="btn primary" type="submit">Add</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr><th>Title</th><th>Code</th><th></th></tr>
+      </thead>
+      <tbody id="coursesList"></tbody>
+    </table>
+  </section>
+
+  <!-- Students Section -->
+  <section>
+    <h2>Students</h2>
+
+    <form id="studentForm" class="form">
+      <input type="text" id="studentName" placeholder="Student Name" required>
+      <input type="email" id="studentEmail" placeholder="Email">
+      <button class="btn primary" type="submit">Add</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Email</th><th></th></tr>
+      </thead>
+      <tbody id="studentsList"></tbody>
+    </table>
+  </section>
+
+  <!-- Registration Section -->
+  <section>
+    <h2>Registration</h2>
+
+    <div class="form">
+      <select id="studentSelect"></select>
+      <select id="courseSelect"></select>
+
+      <button class="btn register" id="registerBtn">Register</button>
+      <button class="btn unregister" id="unregisterBtn">Unregister</button>
+    </div>
+
+    <button class="btn seed" id="seedBtn">Reset Demo Data</button>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
