@@ -177,7 +177,12 @@ app.post("/api/seed", async (req, res) => {
 });
 
 // ✅ FIX: Express 5 wildcard route
-app.use((req, res) => {
+// app.use((req, res) => {
+//   res.sendFile(path.join(__dirname, "../public/index.html"));
+// });
+
+// ⬇️ ADD THIS AT THE VERY END
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
