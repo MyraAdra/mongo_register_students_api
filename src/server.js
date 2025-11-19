@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 //app.use(cors());
 app.use(cors({
-  origin: "https://myraadra.github.io/mongo_register_students_html/"
+  origin: "https://myraadra.github.io"
 }));
 app.use(express.json());
 
