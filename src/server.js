@@ -182,7 +182,7 @@ app.post("/api/seed", async (req, res) => {
 // });
 
 // ⬇️ ADD THIS AT THE VERY END
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
